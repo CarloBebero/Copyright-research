@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+/* fonts  */
+
+/* `
+font-weight: 500;
+font-style: normal; */
+
+/* cursive  */
+
+/* font-family: "Allura", cursive;
+font-weight: 400;
+font-style: normal; */
+
+
+/* font-family: "GrandSlang Roman"; */
+
+
+:root {
+    --bg: #222222;
+    --base-text: #e4dad3;
+    --accent-color: rgb(193, 147, 132);
+    
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg);
+    font-family: "Thasadith", sans-serif;
+    /* font-weight: 800; */
+    font-style: normal;
+}
+
+.home {
+    overflow: hidden;
+}
+
+/* menu */
+nav {
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.menu__logo, .menu__items-link {
+    padding: 40px;
+}
+
+.menu__logo a {
+    color: var(--base-text);
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.menu__items {
+    display: flex;
+}
+
+.menu__items-link a {
+    color: var(--base-text);
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.menu__items-link.active a {
+    text-decoration: underline;
+}
+
+/* horizontal scroll items  */
+
+.container {
+    margin-top: 180px;
+    margin-left: 200px;
+}
+
+.container__item {
+    position: relative;
+    width: 540px;
+    height: 360px;
+    margin: 50px 500px 20px 80px;
+}
+
+.container__item-header h1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 600px;
+    height: 60px;
+    font-size: 100px !important;
+}
+
+.container__item h1 {
+    /* line-height: rem; */
+    position: absolute;
+    left: 20px;
+    bottom: -40px;
+    color: var(--base-text);
+    font-family: "GrandSlang Roman";
+    font-weight: lighter;
+    font-size: 64px;
+}
+
+.cursive {
+    font-family: "Thasadith", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+.info {
+    font-size: 1.6rem;
+    font-family: "Thasadith", sans-serif;
+}
+.container__item-title a {
+    color: var(--base-text);
+    text-decoration: none;
+    transition: all .1s ease-in-out;
+}
+.container__item-title a:hover {
+    color: white;
+}
+
+.container__item-1 {
+    background: url(../pics/img-four.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.container__item-2 {
+    background: url(../pics/img-two.jpeg) no-repeat 10% 50%;
+    background-size: cover;
+}
+
+.container__item-3 {
+    background: url(../pics/img-three.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.container__item-4 {
+    background: url(../pics/img-three.jpeg) no-repeat 10% 50%;
+    background-size: cover;
+}
+
+
+@media(max-width: 900px) {
+    .container__item {
+        width: 300px;
+        height: 200px;
+        margin: 50px 100px 20px 80px;
+    }
+
+    .container__item-header h1 {
+        font-size: 30px !important;
+        left: -50%;
+    }
+
+    .container__item h1 {
+        font-size: 40px;
+        bottom: -20px;
+    }
+}
+
+
+@media(max-width: 900px) {
+    .about__container {
+        width: 70%;
+        margin: 140px 0 60px 40px;
+    }
+
+    .cursor-follow {
+        display: none;
+    }
+}
+
+/* project section */
+/* #title {
+    font-size: 90px;
+} */
+.link {
+    text-decoration: 1px solid underline;
+    color: inherit;
+    transition: all .1s ease-in-out;
+}
+.link:hover {
+    text-decoration: 1px solid underline;
+    color: inherit;
+    color: white;
+}
+.project__container {
+    width: 70%;
+    margin: 100px auto;
+    /* border: 1px solid #5c5c5c; */
+    color: var(--base-text);
+    padding: 120px 40px;
+    text-align: center;
+}
+
+.project__container-title h1{
+    color: var(--base-text);
+    font-family: "GrandSlang Roman";
+    font-size: 140px;
+}
+
+.project__container-subtitle {
+    margin: 20px 0;
+    font-family: "Neue Montreal";
+    font-size: 16px;
+}
+
+.project__container-images {
+    position: relative;
+    width: 100%;
+    /* height: 2000px; */
+    padding: 40px 0;
+}
+
+.project__image {
+    background: rgb(255, 255, 255);
+    width: 900px;
+    height: 500px;
+    margin: 40px auto;
+}
+
+.project__image-one {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    background: url(../pics/img-four.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.project__image-two {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    position: relative;
+    top: 100px;
+    left: -260px;
+    background: url(../pics/img-two.jpeg) no-repeat 5% 50%;
+    background-size: cover;
+}
+
+.project__image-three {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    position: relative;
+    left: 300px;
+    top: 50px;
+    background: url(../pics/the-sequence.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.project__image-four {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    position: relative;
+    top: 100px;
+    left: -100px;
+    background: url(../pics/the-gap.jpeg) no-repeat 5% 50%;
+    background-size: cover;
+}
+.project__image-five {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    position: relative;
+    left: 300px;
+    top: 50px;
+    background: url(../pics/bruno-one.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.project__image-six {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    position: relative;
+    top: 100px;
+    left: -100px;
+    background: url(../pics/mark-ronson.jpeg) no-repeat 5% 50%;
+    background-size: cover;
+}
+.project__image-seven {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    position: relative;
+    left: 300px;
+    top: 50px;
+    background: url(../pics/bruno-three.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.project__image-eight {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    position: relative;
+    top: 100px;
+    left: -100px;
+    background: url(../pics/bruno-four.jpeg) no-repeat 5% 50%;
+    background-size: cover;
+}
+.project__image-9 {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    position: relative;
+    left: 300px;
+    top: 50px;
+    background: url(../pics/mark-ronson.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.project__image-10 {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    position: relative;
+    top: 100px;
+    left: -100px;
+    background: url(../pics/bruno-two.jpeg) no-repeat 5% 50%;
+    background-size: cover;
+}
+.project__image-11 {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    position: relative;
+    left: 300px;
+    top: 50px;
+    background: url(../pics/mark-three.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.project__image-12 {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    position: relative;
+    top: 100px;
+    left: -100px;
+    background: url(../pics/img-three.jpeg) no-repeat 5% 60%;
+}
+.text {
+    font-family: "Thasadith", sans-serif;
+    padding: 0 20% 0 20%;
+    font-size: 1.5rem;
+    text-align: left;
+    color: var(--base-text);
+}
+.project-next-link {
+    position: relative;
+    top: 100px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    /* padding: 20px; */
+    justify-content: space-between;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.project-next-link a {
+    color: var(--base-text);
+    text-decoration: none;
+    font-family: "GrandSlang Roman";
+    font-size: 160px;
+    transition: all .2s ease-in-out;
+}
+
+.project-next-link a:hover {
+    color: white;
+    font-size: 158px;
+    transform: translateX(-10px);
+}
+
+.anime-js-title .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+@media(max-width: 900px) {
+    .project__container-title h1 {
+        font-size: 40px;
+    }
+
+    .project__container {
+        width: 80%;
+    }
+
+    .project__container-images {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .project__image {
+        width: 90%;
+    }
+
+    .project__image-one, .project__image-two, .project__image-three, .project__image-four {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+}
+
+.footer {
+    color: grey;
+    font-size: smaller;
+    padding: 0;
+}

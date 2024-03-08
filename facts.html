@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlo Bebero | Copyright Research Project</title>
+    <link rel="icon" href="pics/Logo.png">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- greensock -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <!-- locomotive-scroll -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.2.5/dist/locomotive-scroll.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.2.5/dist/locomotive-scroll.min.js"></script>
+</head>
+
+<body id="js-scroll">
+    <div class="wrapper">
+
+        <!-- menu -->
+        <nav class="menu">
+            <div class="menu__logo">
+                <a href="index.html">By Carlo Bebero</a>
+            </div>
+            <div class="menu__items">
+                <div class="menu__items-link active"><a href="index.html">HOME</a></div>
+            </div>
+        </nav>
+
+        <!-- project section -->
+        <div class="project__container" data-scroll-section>
+
+            <div class="project__container-title" data-scroll>
+                <h1 class="anime-js-title">FACTS</h1>
+            </div>
+            <div class="project__container-subtitle" data-scroll>
+                <p class="text" style="text-align: center;">Uptown Funk Copyright Infringement Case Summary:</p>
+            </div>
+
+            <p class="text"><br><br> "Uptown Funk" is a song by British record producer Mark Ronson, featuring American singer and songwriter Bruno Mars. It was released on 10 November 2014, as the lead single from Ronson's fourth studio album, Uptown Special (2015). <br><br>Written by Mark Ronson, Bruno Mars, Philip Lawrence, Jeff Bhasker, Nicholas Williams, Devon Gallaspy, Charles Wilson, Robert Wilson, Ronnie Wilson, Rudolph Taylor, Lonnie Simmons.</p><br>
+            <h2 class="text">Album Information</h2>
+                <ul class="text">
+                    <li><strong>Album:</strong> Uptown Special</li>
+                    <li><strong>Released:</strong> 10 November 2014</li>
+                    <li><strong>Artist:</strong> Mark Ronson</li>
+                    <li><strong>Featured artist:</strong> Bruno Mars</li>
+                    <li><strong>Genre:</strong> Pop</li>
+                    <li><strong>Label:</strong> Columbia, Sony, RCA</li>
+                </ul>
+
+            <div class="project__container-images">
+                <div class="project__image project__image-one" data-scroll data-scroll-speed="1">
+                </div>
+                <div class="project__image project__image-two" data-scroll data-scroll-speed="4">
+                </div>
+            </div>
+            <p class="text">Various artists and songwriters alleged that "Uptown Funk" copied elements from their earlier compositions, including <a class="link"  href="https://www.youtube.com/watch?v=3M8-eIE-gSw" target="_blank">"Funk You Up" by The Sequence</a> and <a class="link" href="https://www.youtube.com/watch?v=yVjFwcdQlN0" target="_blank" rel="noopener noreferrer">"Oops Up Side Your Head" by The Gap Band</a>. They claimed that "Uptown Funk" infringed upon their copyright by using similar rhythms, melodies, and lyrics.
+            </p>
+
+            <div class="project__container-images">
+                <div class="project__image project__image-three" data-scrol data-scroll-speed="2">
+                </div>
+                <div class="project__image project__image-four" data-scroll data-scroll-speed="4">
+                </div>
+            </div>
+            <p class="text"><br>The lawsuit was filed in 2016, with The Sequence claiming that "Uptown Funk" copied their 1979 song "Funk You Up." The Gap Band's publishers also joined the lawsuit, alleging similarities between "Uptown Funk" and their 1979 track "Oops Up Side Your Head."<br><br> The plaintiffs argued that "Uptown Funk" had appropriated significant portions of their songs without permission.</p>
+
+
+            
+
+            <div class="project-next-link" data-scroll>
+                <a href="index.html">Back</a> <a href="outcome.html">Next</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script>
+        // smooth scroll 
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('#js-scroll'),
+            smooth: true,
+            smoothMobile: true,
+            inertia: 0.75
+        });
+
+        // project title animation 
+        var textWrapper = document.querySelector('.anime-js-title');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        anime.timeline()
+            .add({
+                targets: '.anime-js-title .letter',
+                translateY: [60, 0],
+                translateZ: 0,
+                opacity: [0, 1],
+                easing: "easeOutExpo",
+                duration: 1200,
+                delay: (el, i) => 600 + 30 * i
+            });
+
+        // project subtitle animation 
+        TweenMax.from(".project__container-subtitle", 2, {
+            y: 10,
+            opacity: 0,
+            ease: Expo.easeInOut
+        });
+
+        // project image fade 
+        TweenMax.from(".project__image-one", 2, {
+            opacity: 0,
+            ease: Expo.easeInOut
+        });
+    </script>
+</body>
+
+</html>

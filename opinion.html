@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlo Bebero | Copyright Research Project</title>
+    <link rel="icon" href="pics/Logo.png">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- greensock -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <!-- locomotive-scroll -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.2.5/dist/locomotive-scroll.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.2.5/dist/locomotive-scroll.min.js"></script>
+</head>
+
+<body id="js-scroll">
+    <div class="wrapper">
+
+        <!-- menu -->
+        <nav class="menu">
+            <div class="menu__logo">
+                <a href="index.html">By Carlo Bebero</a>
+            </div>
+            <div class="menu__items">
+                <div class="menu__items-link active"><a href="index.html">HOME</a></div>
+            </div>
+        </nav>
+
+        <!-- project section -->
+        <div class="project__container" data-scroll-section>
+
+            <div class="project__container-title" data-scroll>
+                <h1 id="title" class="anime-js-title">PERSONAL INSIGHT</h1>
+                <!-- <h1 class="anime-js-title">OUTCOME & SIGNIFICANCE</h1> -->
+            </div>
+            <div class="project__container-subtitle" data-scroll>
+                <p class="text" style="text-align: center;">Uptown Funk Copyright Infringement Case:</p>
+            </div>
+
+            <p class="text"><br><br> 
+                In my opinion, the agreement made in the "Uptown Funk" case seems fair. It shows that they understand how earlier songs influenced "Uptown Funk" while still giving credit to the original creators. When artists get inspiration from other songs, it's important to do it in a way that follows copyright laws and gives the right recognition to the original work.</p><br>
+            <div class="project__container-images">
+                <div class="project__image project__image-9" data-scroll data-scroll-speed="1">
+                </div>
+                <div class="project__image project__image-12" data-scroll data-scroll-speed="4">
+                </div>
+            </div>
+            <p class="text"><br>Copyright laws are rules that protect original things people created, such as songs or art. In cases like "Uptown Funk," where songs seem alike, it's crucial for artists to talk to the original creators. They might have to make agreements to use their work and respect their rights.
+
+
+            </p>
+
+            <div class="project__container-images">
+                <div class="project__image project__image-10" data-scrol data-scroll-speed="2">
+                </div>
+                <div class="project__image project__image-11" data-scroll data-scroll-speed="4">
+                </div>
+            </div>
+            <p class="text"><br>
+                the "Uptown Funk" case highlights the vital role of copyright laws in protecting creators' rights and ensuring they receive fair recognition and compensation for their contributions. It serves as a reminder for artists to handle copyright issues with care and address them appropriately to avoid potential legal consequences. 
+                <br><br>
+                Following these rules and respecting others' rights helps artists work ethically in the creative world. <br><br>
+
+            <div class="project-next-link" data-scroll>
+                <a href="outcome.html">Back</a> <a href="index.html">Home</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script>
+        // smooth scroll 
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('#js-scroll'),
+            smooth: true,
+            smoothMobile: true,
+            inertia: 0.75
+        });
+
+        // project title animation 
+        var textWrapper = document.querySelector('.anime-js-title');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        anime.timeline()
+            .add({
+                targets: '.anime-js-title .letter',
+                translateY: [60, 0],
+                translateZ: 0,
+                opacity: [0, 1],
+                easing: "easeOutExpo",
+                duration: 1200,
+                delay: (el, i) => 600 + 30 * i
+            });
+
+        // project subtitle animation 
+        TweenMax.from(".project__container-subtitle", 2, {
+            y: 10,
+            opacity: 0,
+            ease: Expo.easeInOut
+        });
+
+        // project image fade 
+        TweenMax.from(".project__image-one", 2, {
+            opacity: 0,
+            ease: Expo.easeInOut
+        });
+    </script>
+</body>
+
+</html>

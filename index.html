@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlo Bebero | Copyright Research Project</title>
+    <link rel="icon" href="pics/Logo.png">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- greensock -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+</head>
+
+<body class="home">
+    <div class="wrapper">
+
+        <!-- menu -->
+        <nav class="menu">
+            <div class="menu__logo">
+                <a href="index.html">By Carlo Bebero</a>
+            </div>
+            <div class="menu__items">
+                <div class="menu__items-link active"><a href="index.html">HOME</a></div>
+            </div>
+        </nav>
+
+        <!-- horizontal scroll items -->
+        <div class="container">
+            <div class="container__item container__item-header">
+                <h1>Copyright<br><span class="cursive">Research</span> Project <br><div class="audio"> 
+                    <audio controls>
+                        <source src="audio/Mark Ronson - Uptown Funk (Official Audio) ft. Bruno Mars.mp3" type="audio/mpeg">
+                    </audio>
+                </div><span class="info">Copyright Infringement Case: Mark Ronson / Bruno Mars ("Uptown Funk")</span></h1>
+            </div>
+
+            <div class="container__item container__item-1">
+                <h1 class="container__item-title">
+                    <a id="hover" href="facts.html">Facts</a>
+                </h1>
+            </div>
+            <div class="container__item container__item-2">
+                <h1 class="container__item-title">
+                    <a id="hover" href="outcome.html">Outcome & Significance</a>
+                </h1>
+            </div>
+            <div class="container__item container__item-4">
+                <h1 class="container__item-title">
+                    <a id="hover" href="opinion.html">Personal Insight</a>
+                </h1>
+            </div>
+            <div class="container__item">
+                <p class="footer"><small>By Carlo Bebero. 2024.</small></p>
+                <p class="footer"><small>cbebero@confederationocollege.ca</small></p>
+                <p class="footer"><small>I do not own any of the images.</small></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- script -->
+    <script src="js/horizontal-scroll.js"></script>
+    <script>
+        var blocks = document.getElementsByClassName("container__item");
+        var container = document.getElementsByClassName("container");
+        var hs = new HorizontalScroll.default({
+            blocks: blocks,
+            container: container,
+            isAnimated: true,
+            springEffect: 0.8,
+        });
+    </script>
+</body>
+
+</html>
